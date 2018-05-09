@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quiz.MainActivity">
+
+
+    <Button
+        android:id="@+id/answer4"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_alignLeft="@+id/answer2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/answer2"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answer3"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_above="@+id/answer4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_above="@+id/answer3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answer1"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_above="@+id/answer2"
+        android:layout_alignLeft="@+id/answer2"
+        android:layout_alignStart="@+id/answer2"
+        android:layout_marginBottom="15dp"
+        android:text="Button" />
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/answer1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:textSize="20dp"/>
+</RelativeLayout>
