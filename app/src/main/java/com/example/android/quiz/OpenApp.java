@@ -1,6 +1,7 @@
 package com.example.android.quiz;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,13 +35,17 @@ public class OpenApp extends AppCompatActivity {
             @Override
            public void onClick(View view) {
 
-                EditText edt =findViewById(R.id.name);
-                EditText surname = (EditText)findViewById(R.id.lastname);
+                EditText edt =(EditText) findViewById(R.id.name);
+
+
+                String msg=edt.getText().toString();
+
+
 
                Intent intent = new Intent(OpenApp.this,MainActivity.class);
-               intent.putExtra("name",edt.getText().toString());
-               intent.putExtra("surname",surname.getText().toString());
+               intent.putExtra("name", msg);
                startActivity(intent);
+               finish();
            }
         });
     }

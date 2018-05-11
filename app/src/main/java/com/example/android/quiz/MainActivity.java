@@ -49,24 +49,32 @@ public class MainActivity extends AppCompatActivity {
         answer4 = findViewById(R.id.answer4);
 
         question = findViewById(R.id.question);
-        // score =  findViewById(R.id.score);
-        // score.setText(mScore);
+//         score =  findViewById(R.id.score);
+//        score.setText(mScore);
 
 
         updateQuestion(r.nextInt(mQuestionsLength));
+
+
+       TextView textView =  findViewById(R.id.textview);
+        Bundle bb;
+       bb = getIntent().getExtras();
+       textView.setText("Hello, "+ bb.getString("name"));
+
+
 
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (answer1.getText() == mAnswer) {
                     mScore++;
-                    // score.setText(mScore);
+                     //score.setText(mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));
                     Toast.makeText(MainActivity.this, "Your answer is correct", Toast.LENGTH_SHORT).show();
                 } else {
-                    //   gameOver();
-                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
-                    startActivity(intent);
+                      gameOver();
+//                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
+//                    startActivity(intent);
 
                     Toast.makeText(MainActivity.this, "Your answer is wrong", Toast.LENGTH_SHORT).show();
                     //Intent intent = new Intent(MainActivity)
@@ -84,9 +92,9 @@ public class MainActivity extends AppCompatActivity {
                     updateQuestion(r.nextInt(mQuestionsLength));
                     Toast.makeText(MainActivity.this, "Your answer is correct", Toast.LENGTH_SHORT).show();
                 } else {
-                    //gameOver();
-                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
-                    startActivity(intent);
+                    gameOver();
+//                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
+//                    startActivity(intent);
 
                     Toast.makeText(MainActivity.this, "Your answer is wrong", Toast.LENGTH_SHORT).show();
                 }
@@ -103,10 +111,10 @@ public class MainActivity extends AppCompatActivity {
                     updateQuestion(r.nextInt(mQuestionsLength));
                     Toast.makeText(MainActivity.this, "Your answer is correct", Toast.LENGTH_SHORT).show();
                 } else {
-                    // gameOver();
+                     gameOver();
 
-                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
+//                    startActivity(intent);
                     Toast.makeText(MainActivity.this, "Your answer is wrong", Toast.LENGTH_SHORT).show();
                 }
 
@@ -122,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
                     updateQuestion(r.nextInt(mQuestionsLength));
                     Toast.makeText(MainActivity.this, "Your answer is correct", Toast.LENGTH_SHORT).show();
                 } else {
-                    //  gameOver();
-                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
-                    startActivity(intent);
+                     gameOver();
+//                    Intent intent = new Intent(MainActivity.this, ExitsActivity.class);
+//                    startActivity(intent);
 
 
                     Toast.makeText(MainActivity.this, "Your answer is wrong", Toast.LENGTH_SHORT).show();
@@ -148,8 +156,22 @@ public class MainActivity extends AppCompatActivity {
     }
     public void gameOver(){
 
-        Intent intent  = new Intent(MainActivity.this,ExitsActivity.class);
-        startActivity(intent);
+        AlertDialog.Builder alertDialogBuilder=new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder
+                .setMessage("Game Over! Your Score is "+mScore+" Points")
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(getApplicationContext(),ExitsActivity.class));
+                        finish();
+
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
+
 
     }
     public void onBackPressed(){
