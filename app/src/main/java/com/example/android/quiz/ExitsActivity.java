@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+//import android.widget.TextView;
 
-import org.w3c.dom.Text;
+//import org.w3c.dom.Text;
 
 public class ExitsActivity extends AppCompatActivity {
 
@@ -21,8 +21,8 @@ public class ExitsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exits);
 
 
-        mnGame = (Button) findViewById(R.id.newGame);
-        mExits = (Button) findViewById(R.id.exits);
+        mnGame =  findViewById(R.id.newGame);
+        mExits =  findViewById(R.id.exits);
 
 
 

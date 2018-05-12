@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Quiz</string>
     <string name="title_activity_open">OpenActivity</string>
+    <string name="enterN">Enter Your Name</string>
+    <string name="nam">Name</string>
+    <string name="strt">Start</string>
+    <string name="welcme">Welcome</string>
+    <string name="fins">FINISH</string>
+    <string name="ext">Exits</string>
+    <string name="nwgan">New game</string>
 
 </resources>

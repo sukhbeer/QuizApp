@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context="com.example.android.quiz.ExitsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textview"
-        android:text="Thank You"
+        android:text="@string/fins"
+        android:layout_marginTop="25dp"
         android:textStyle="bold"
+        android:textColor="#000000"
         android:gravity="center_horizontal"
-        android:textSize="30dp"/>
-
-
+        android:textSize="30sp"/>
 
 
     <Button
         android:id="@+id/exits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newGame"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:text="Exits" />
+        android:layout_centerVertical="true"
+        android:text="@string/ext" />
 
 
     <Button
         android:id="@+id/newGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/exits"
         android:layout_alignEnd="@+id/exits"
         android:layout_alignRight="@+id/exits"
-        android:layout_below="@+id/textview2"
-        android:layout_marginTop="101dp"
-        android:text="New game" />
+        android:layout_marginBottom="19dp"
+        android:text="@string/nwgan" />
 
 </RelativeLayout>

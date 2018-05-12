@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context="com.example.android.quiz.OpenApp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Your Name"
+        android:text="@string/enterN"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
         android:gravity="center_horizontal"
-        android:textSize="30dp"
+        android:textSize="35sp"
         android:textColor="#000000"
         android:id="@+id/textView2"/>
 
@@ -23,8 +25,13 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="117dp"
-        android:hint="Name"
-        android:inputType="textCapWords" />
+        android:hint="@string/nam"
+        android:drawableLeft="@drawable/ic_user_24dp"
+        android:drawablePadding="8dp"
+        android:textColorHint="@android:color/black"
+        android:background="#9bde901b"
+        android:inputType="textCapWords"
+        android:drawableStart="@drawable/ic_user_24dp" />
 
 
 
@@ -37,5 +44,5 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom"
         android:layout_marginBottom="86dp"
-        android:text="Start" />
+        android:text="@string/strt" />
 </RelativeLayout>

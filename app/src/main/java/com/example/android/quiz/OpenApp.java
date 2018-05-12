@@ -1,7 +1,7 @@
 package com.example.android.quiz;
 
 import android.content.Intent;
-import android.os.Parcelable;
+//import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +27,7 @@ public class OpenApp extends AppCompatActivity {
 
 
 
-        mopenNext = (Button)findViewById(R.id.openNext);
+        mopenNext = findViewById(R.id.openNext);
 
 
 
@@ -35,7 +35,7 @@ public class OpenApp extends AppCompatActivity {
             @Override
            public void onClick(View view) {
 
-                EditText edt =(EditText) findViewById(R.id.name);
+                EditText edt = findViewById(R.id.name);
 
 
                 String msg=edt.getText().toString();
