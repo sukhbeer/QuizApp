@@ -1,2 +1,2 @@
 # QuizApp
-Quizapp for udacity scholarship programe 
+Quiz app for udacity scholarship program 
