@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:background="@drawable/login_background"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     tools:context="com.example.android.quiz.MainActivity">
 
 
@@ -17,7 +17,7 @@
         android:layout_alignStart="@+id/answer2"
         android:layout_marginBottom="35dp"
         android:gravity="center"
-        android:text="Button" />
+        android:text="@string/button" />
 
     <Button
         android:id="@+id/answer3"
@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Button" />
+        android:text="@string/button" />
 
     <Button
         android:id="@+id/answer2"
@@ -37,7 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Button" />
+        android:text="@string/button" />
 
     <Button
         android:id="@+id/answer1"
@@ -47,7 +47,7 @@
         android:layout_alignLeft="@+id/answer2"
         android:layout_alignStart="@+id/answer2"
         android:layout_marginBottom="15dp"
-        android:text="Button" />
+        android:text="@string/button" />
 
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/textviev"
         android:textColor="#000000"
         android:textSize="24sp" />
 
@@ -69,11 +69,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:textColor="#000000"
-        android:gravity="center"
         android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="#000000"
         android:textSize="25sp" />
-
 
 
 </RelativeLayout>

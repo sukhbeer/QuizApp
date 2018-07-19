@@ -11,15 +11,7 @@ import android.widget.EditText;
 public class OpenApp extends AppCompatActivity {
 
     Button mopenNext;
-/*
 
-    EditText edt =findViewById(R.id.name);
-    EditText txt =findViewById(R.id.lastname);
-*/
-
-    /*String msg=edt.getText().toString();
-    String lst=txt.getText().toString();
-*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
